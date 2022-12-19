@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<root>
-  <Student>
+<students>
+  <student>
     <name>Ivan Ivanov</name>
     <averagemark>4.8</averagemark>
-  </Student>
-  <Student>
+  </student>
+  <student>
     <name>Maria Kuznecova</name>
     <averagemark>5.0</averagemark>
-  </Student>
-  <Student>
+  </student>
+  <student>
     <name>Stepan Kuzmin</name>
     <averagemark>3.6</averagemark>
-  </Student>
-</root>
+  </student>
+</students>
