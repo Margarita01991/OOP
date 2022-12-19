@@ -4,7 +4,7 @@ public class Student {
     private String name;
     private float avgMark;
 
-    public Student(String name, String surname, float avgMark) {
+    public Student(String name, float avgMark) {
         this.name = name;
         this.avgMark = avgMark;
     }
