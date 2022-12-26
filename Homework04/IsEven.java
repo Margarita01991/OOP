@@ -1,4 +1,4 @@
-package Homework4;
+package Homework04;
 
 public class IsEven implements IsGood<Integer> {
     @Override

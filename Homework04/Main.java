@@ -1,4 +1,4 @@
-package Homework4;
+package Homework04;
 
 /*Создайте интерфейс IsGood<T>. Внутри него содержится единственная функция:
 boolean isGood (T item);
@@ -13,8 +13,8 @@ boolean isGood (T item);
 Продемонстрируйте, что это работает.
  */
 
- import java.util.ArrayList;
- import java.util.List;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -50,10 +50,9 @@ public class Main {
         IsGood<String> isGoodBegins = new BeginsWith("rut");
         System.out.println(filter(stringList, isGoodBegins) + "\n");
     }
-    public static <ListData> List<ListData> filter(Iterable<ListData> array,
-            IsGood<ListData> isGood) {
-        ArrayList<ListData> newList = new ArrayList<ListData>();
-        for (ListData item : array) {
+    private static <T> List<T> filter(Iterable<T> array, IsGood<T> isGood) {
+        List<T> newList = new ArrayList<>();
+        for (T item : array) {
             if (isGood.isGood(item) == true) {
                 newList.add(item);
             }

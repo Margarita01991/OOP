@@ -1,4 +1,4 @@
-package Homework4;
+package Homework04;
 
 public class BeginsWith implements IsGood<String> {
 
