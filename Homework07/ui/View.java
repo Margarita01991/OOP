@@ -22,7 +22,7 @@ public class View {
     }
     public void showCounterAgent(List<Agent> counterAgents) {
         if (counterAgents.isEmpty()) {
-            System.out.println("Контрагентов по запросу не найдено.");
+            System.out.println("\u001B[Контрагентов по запросу не найдено.\u001b[0m");
         } else {
             for (Agent CounterAgent : counterAgents) {
                 System.out.println(CounterAgent.toString());
@@ -33,7 +33,7 @@ public class View {
     public void showAllContacts(List<Agent> counterAgents) {
         System.out.println("......................");
         if (counterAgents.isEmpty()) {
-            System.out.println("Контрагентов по запросу не найдено.");
+            System.out.println("\u001B[Контрагентов по запросу не найдено.\u001b[0m");
         } else {
             for (Agent counterAgent : counterAgents) {
                 System.out.println(counterAgent.getName());

@@ -25,7 +25,7 @@ public class Presenter {
                 case (2):
                     System.out.println("Введите имя контрагента:");
                     String name = in.next();
-                    view.showCounterAgent(model.findAgentByName(name));
+                    view.showCounterAgent(model.findAgent(name));
                     break;
                 case (3):
                     System.out.println("Введите наименование контрагента:");
@@ -42,7 +42,7 @@ public class Presenter {
                     System.out.println("......................");
                     break;
                 case (5):
-                    model.addNewContact(view.getContactName(in), view.contactMenu(in));
+                    model.addContact(view.getContactName(in), view.contactMenu(in));
                     System.out.println("\u001B[42mНовый способ связи добавлен\u001b[0m");
                     System.out.println("......................");
                     break;

@@ -15,7 +15,7 @@ public class Model {
     public Model(List<Agent> counterAgents) {
         this.counterAgents = counterAgents;
     }
-    public List<Agent> findAgentByName(String name) {
+    public List<Agent> findAgent(String name) {
         List<Agent> foundAgents = new ArrayList<>();
         for (Agent counterAgent : counterAgents) {
             if (counterAgent.getName().equalsIgnoreCase(name)) {
@@ -30,15 +30,15 @@ public class Model {
         counterAgents.add(new Person(name, contacts));
     }
     public void removeAgent(String name) {
-        counterAgents.removeAll(findAgentByName(name));
+        counterAgents.removeAll(findAgent(name));
     }
-    public void addNewContact(String name, Contact contact) {
-        for (Agent counterAgent : findAgentByName(name)) {
+    public void addContact(String name, Contact contact) {
+        for (Agent counterAgent : findAgent(name)) {
             counterAgent.addContact(contact);
         }
     }
     public void removeContact(String name, String value) {
-        for (Agent counterAgent : findAgentByName(name)) {
+        for (Agent counterAgent : findAgent(name)) {
             Contact contactForRemove = null;
             for (Contact contact : counterAgent.getContacts()) {
                 if (contact.getName().equalsIgnoreCase(value)) {
